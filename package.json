@@ -21,6 +21,8 @@
     "dotenv": "^6.0.0",
     "fs": "0.0.1-security",
     "node-spotify-api": "^1.0.7",
-    "request": "^2.87.0"
+    "request": "^2.87.0",
+    "twit": "^2.2.11",
+    "twitter": "^1.7.1"
   }
 }

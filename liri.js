@@ -6,6 +6,7 @@ var request = require("request");
 var fs = require("fs");
 var keys = require("./keys.js");
 var Spotify = require('node-spotify-api');
+var Twitter = require('twitter');
 
 ///////////////////////////////
 // constants and variables
@@ -51,15 +52,31 @@ function processCommand(commandConfig) {
     switch (commandConfig.command) {
 
         case 'my-tweets':
-            // console.log("in my-tweets");
+            console.log("in my-tweets");
 
-            // var client = new Twitter(keys.twitter);
+            var client = new Twitter(keys.twitter);
             // console.log(client);
 
-            var tweet = (commandConfig.options[0] === undefined) ? "" : commandConfig.options[0];
+            // var tweet = (commandConfig.options[0] === undefined) ? "" : commandConfig.options[0];
 
             // show last 20 tweets and when they were created
+            var params = {
+                screen_name: 'nodejs',
+                q: 'dev_jenni',
+                count: 20
+            }
+            client.get('search/tweets', params, twitterData);
 
+            function twitterData(err, data, response) {
+                // if the request is unsuccessful
+                if (err) { return console.log(err); }
+
+                // if the request is successful
+                if (!err && response.statusCode === 200) {
+                    console.log("it worked");
+                    console.log(data);
+                }
+            } 
 
             ///////////////////////////
             // console log output
