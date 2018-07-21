@@ -7,12 +7,14 @@ var fs = require("fs");
 var keys = require("./keys.js");
 var Spotify = require('node-spotify-api');
 var Twitter = require('twitter');
+var moment = require("moment");
 
 ///////////////////////////////
 // constants and variables
 ///////////////////////////////
 const DEFAULT_SONG = "The Sign";
 const DEFAULT_ARTIST = "Ace of Base";
+// const twitterDateFormat="EEE MMM dd HH:mm:ss ZZZZZ yyyy";
 
 var cmdObj = {
     command: '',
@@ -74,18 +76,49 @@ function processCommand(commandConfig) {
                     console.log("------------------------------");
                     console.log("***** TWEETS *****");
                     for (var i = 0; i < data.statuses.length; i++) {
+
+                        ////////////////////////////////////////////////////////
+                        // split up the twitter date so we can deal with it
+                        // twitter date format: 'Mon Dec 02 23:45:49 +0000 2013'
+                        // TODO explore Twitter Dates further
+                        ////////////////////////////////////////////////////////
+                        var tweetDateString = data.statuses[i].created_at;
+                        var tweetDateArray = tweetDateString.split(' ');
+                        
+                        var tweetMonth = tweetDateArray[1];
+                        var tweetDay = tweetDateArray[2];
+                        var tweetTime = tweetDateArray[3];
+                        var tweetYear = tweetDateArray[5];
+
+                        // create a new date in this format: 'Jul 21 2018 16:51:17.000Z'  (earlier: "2015-03-25T12:00:00Z")
+                        var newDateString = tweetMonth + " " + tweetDay + " "+ tweetYear + " " + tweetTime + ".000Z";
+                        // console.log(newDateString);
+                        var d = new Date(newDateString);
+                        // console.log("Javascript Date: " + d.toISOString());
+                        // console.log(moment(d).format("MM/DD/YYYY HH:MM:ss A"));
+
+                        // var d = new Date(data.statuses[i].created_at);
+                        // var input = d.toISOString().
+                        //     replace(/\.\d+Z/,'Z');
+                        //     // replace(/T/, ' ').      // replace T with a space
+                        //     // replace(/\..+/, '');     // delete the dot and everything after
+                        // console.log(input);
+                        // console.log(moment(d).format("MM/DD/YYYY HH:MM:ss"));
+
                         console.log("Tweet #" + i + " >>");
                         console.log("Tweet: " + data.statuses[i].text);
-                        console.log("Created On: " + data.statuses[i].created_at);
+                        console.log("Created On: " + moment(d).format("MM/DD/YYYY HH:MM:ss"));
                     }
 
                     ///////////////////////
                     // log tweet output
                     ///////////////////////
-                    var logData = "***** TWEETS *****" + "\n" ;
+                    var logData = "***** TWEETS *****";
                     for (var i = 0; i < data.statuses.length; i++) {
+                        logData = logData + "\n";
+
                         logData = logData 
-                            + "Tweet #" + i + " >>"
+                            + "Tweet #" + i + " >>" + "\n"
                             + "Tweet: " + data.statuses[i].text + "\n" 
                             + "Created On: " + data.statuses[i].created_at;
                     }
