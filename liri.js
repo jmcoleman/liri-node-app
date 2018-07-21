@@ -11,8 +11,6 @@ var Twitter = require('twitter');
 ///////////////////////////////
 // constants and variables
 ///////////////////////////////
-const COMMAND_LINE_ORIGIN = "command_line";
-const FILE_ORIGIN = "file";
 const DEFAULT_SONG = "The Sign";
 const DEFAULT_ARTIST = "Ace of Base";
 
@@ -40,7 +38,6 @@ if (process.argv[2] === undefined) {
     console.log("options: " + cmdObj.options);
 }
 
-// processCommand(cmdObj.command, cmdObj.options, COMMAND_LINE_ORIGIN);
 processCommand(cmdObj);
 
 /////////////////////////////////
@@ -52,12 +49,8 @@ function processCommand(commandConfig) {
     switch (commandConfig.command) {
 
         case 'my-tweets':
-            console.log("in my-tweets");
 
             var client = new Twitter(keys.twitter);
-            // console.log(client);
-
-            // var tweet = (commandConfig.options[0] === undefined) ? "" : commandConfig.options[0];
 
             // show last 20 tweets and when they were created
             var params = {
@@ -73,43 +66,44 @@ function processCommand(commandConfig) {
 
                 // if the request is successful
                 if (!err && response.statusCode === 200) {
-                    console.log("it worked");
-                    console.log(data);
+                    // console.log(data);
+
+                    ///////////////////////////
+                    // console log output
+                    ///////////////////////////
+                    console.log("------------------------------");
+                    console.log("***** TWEETS *****");
+                    for (var i = 0; i < data.statuses.length; i++) {
+                        console.log("Tweet #" + i + " >>");
+                        console.log("Tweet: " + data.statuses[i].text);
+                        console.log("Created On: " + data.statuses[i].created_at);
+                    }
+
+                    ///////////////////////
+                    // log tweet output
+                    ///////////////////////
+                    var logData = "***** TWEETS *****" + "\n" ;
+                    for (var i = 0; i < data.statuses.length; i++) {
+                        logData = logData 
+                            + "Tweet #" + i + " >>"
+                            + "Tweet: " + data.statuses[i].text + "\n" 
+                            + "Created On: " + data.statuses[i].created_at;
+                    }
+
+                    logOutput(logData);
                 }
             } 
-
-            ///////////////////////////
-            // console log output
-            ///////////////////////////
-            console.log("------------------------------");
-            console.log("***** TWEETS *****");
-            
-            ///////////////////////
-            // log tweet output
-            ///////////////////////
-            var logData = "***** TWEETS *****" + "\n" ;
-                // + "Artist(s): " + getArtists(item.artists) + "\n"
-                // + "Song Name: " + item.name + "\n"
-                // + "Preview Link: " + item.preview_url + "\n"
-                // + "Album: " + item.album.name;
-            logOutput(logData);
-
-            // logOutput("***** TWEETS *****");
-            // logOutput("Artist(s): " + getArtists(item.artists));
-            // logOutput("Song Name: " + item.name);
-            // logOutput("Preview Link: " + item.preview_url);
-            // logOutput("Album: " + item.album.name);
 
             break;
 
         case 'spotify-this-song':
-            // console.log("in spotify-this-song");
 
             ///////////////////////////////////
             // functions
             ///////////////////////////////////
             function getArtists(artist) {
                 var artistList = '';
+
                 for (var i = 0; i < artist.length; i++) {
                     if (i !== 0) {
                         artistList = artistList + ", ";
@@ -123,10 +117,6 @@ function processCommand(commandConfig) {
                 ///////////////////////////
                 // console log output
                 ///////////////////////////
-
-                // console.log("Track " + index + ": " + JSON.stringify(item));
-                // console.log("-------------------------------------------------------------------------------\nTrack " + index + ": ");
-                // console.dir(item);
 
                 //show output for spotify
                 console.log("------------------------------");
@@ -144,29 +134,20 @@ function processCommand(commandConfig) {
                     + "Song Name: " + item.name + "\n"
                     + "Preview Link: " + item.preview_url + "\n"
                     + "Album: " + item.album.name;
-                logOutput(logData);
 
-                // logOutput("***** SONG *****");
-                // logOutput("Artist(s): " + getArtists(item.artists));
-                // logOutput("Song Name: " + item.name);
-                // logOutput("Preview Link: " + item.preview_url);
-                // logOutput("Album: " + item.album.name);
+                logOutput(logData);
             }
 
             ////////////////////////////////
             // search Spotify
             ////////////////////////////////
             var spotify = new Spotify(keys.spotify);
-            // console.log(spotify);
 
             var title = (commandConfig.options[0] === undefined) ? "track:" + DEFAULT_SONG + ' artist:' + DEFAULT_ARTIST : "track:" + commandConfig.options[0];
-            // console.log("TITLE: " + title);
 
             spotify
                 .search({type: 'track', query: title, limit: 1})
                 .then(function(data) {
-                    // console.log(data); 
-                    // console.log(data.tracks.items);
                     data.tracks.items.forEach(getTrack);
                 })
                 .catch(function(err) {
@@ -175,7 +156,6 @@ function processCommand(commandConfig) {
             break;
 
         case 'movie-this':
-            // console.log("in movie-this");
 
             /////////////////////////////////////
             // search for movies in OMDB api
@@ -221,23 +201,13 @@ function processCommand(commandConfig) {
                         + "Language: " + movie.Language + "\n"
                         + "Plot: " + movie.Plot + "\n"
                         + "Actors: " + movie.Actors;
-                    logOutput(logData);
 
-                    // logOutput("***** MOVIE *****");
-                    // logOutput("Title: " + movie.Title);
-                    // logOutput("Release Date: " + movie.Year);
-                    // logOutput("IMDB Rating: " + movie.imdbRating);
-                    // logOutput("Rotten Tomatoes Rating: " + movie.Ratings[1].Value);     
-                    // logOutput("Production Country: " + movie.Country);
-                    // logOutput("Language: " + movie.Language);
-                    // logOutput("Plot: " + movie.Plot);
-                    // logOutput("Actors: " + movie.Actors);
+                    logOutput(logData);
                 }
             });
             break;
 
         case 'do-what-it-says':
-            // console.log("in do-what-it-says");
 
             // process the file   
             fs.readFile("random.txt","utf8", function(err, data) {
@@ -274,9 +244,6 @@ function processCommand(commandConfig) {
                         + "Options: " + cmdObj.options;
                     logOutput(logData);
 
-                    // logOutput("***** DO WHAT IT SAYS *****");
-                    // logOutput("Command: " + cmdObj.command;
-                    // logOutput("Options: " + cmdObj.options);
                 }
 
                 /////////////////////////////////////

@@ -7,3 +7,86 @@
 ------------------------------
 ***** TWEETS *****
 
+------------------------------
+***** TWEETS *****
+
+------------------------------
+***** TWEETS *****
+
+------------------------------
+***** TWEETS *****
+
+------------------------------
+***** TWEETS *****
+
+------------------------------
+***** TWEETS *****
+Tweet #0>>Tweet: Class is about to start?!
+Created On: Sat Jul 21 14:08:56 +0000 2018Tweet #1>>Tweet: Off to camp at the lake.  Fun.
+Created On: Sat Jul 21 13:42:43 +0000 2018Tweet #2>>Tweet: Good Morning, Folks!
+Created On: Sat Jul 21 13:42:12 +0000 2018Tweet #3>>Tweet: Time to snooze!
+Created On: Sat Jul 21 03:19:44 +0000 2018Tweet #4>>Tweet: ZZZZZZZZ... so sleepy
+Created On: Sat Jul 21 03:19:27 +0000 2018Tweet #5>>Tweet: Movie in the park tonight.  join us!
+Created On: Fri Jul 20 20:16:03 +0000 2018Tweet #6>>Tweet: WEEKEND
+Created On: Fri Jul 20 20:15:20 +0000 2018Tweet #7>>Tweet: 1 more day till the weekend.  Woo Hoo!
+Created On: Fri Jul 20 03:12:48 +0000 2018Tweet #8>>Tweet: Not the most relaxing summer ever...
+Created On: Fri Jul 20 03:11:51 +0000 2018Tweet #9>>Tweet: Summertime fun
+Created On: Fri Jul 20 03:10:58 +0000 2018Tweet #10>>Tweet: It's summertime and it's HOT in Atlanta.
+Created On: Thu Jul 19 01:58:20 +0000 2018Tweet #11>>Tweet: Almost time for College Football!  Go Tigers!
+Created On: Thu Jul 19 01:57:40 +0000 2018
+------------------------------
+***** TWEETS *****
+Tweet #0 >>Tweet: Class is about to start?!
+Created On: Sat Jul 21 14:08:56 +0000 2018Tweet #1 >>Tweet: Off to camp at the lake.  Fun.
+Created On: Sat Jul 21 13:42:43 +0000 2018Tweet #2 >>Tweet: Good Morning, Folks!
+Created On: Sat Jul 21 13:42:12 +0000 2018Tweet #3 >>Tweet: Time to snooze!
+Created On: Sat Jul 21 03:19:44 +0000 2018Tweet #4 >>Tweet: ZZZZZZZZ... so sleepy
+Created On: Sat Jul 21 03:19:27 +0000 2018Tweet #5 >>Tweet: Movie in the park tonight.  join us!
+Created On: Fri Jul 20 20:16:03 +0000 2018Tweet #6 >>Tweet: WEEKEND
+Created On: Fri Jul 20 20:15:20 +0000 2018Tweet #7 >>Tweet: 1 more day till the weekend.  Woo Hoo!
+Created On: Fri Jul 20 03:12:48 +0000 2018Tweet #8 >>Tweet: Not the most relaxing summer ever...
+Created On: Fri Jul 20 03:11:51 +0000 2018Tweet #9 >>Tweet: Summertime fun
+Created On: Fri Jul 20 03:10:58 +0000 2018Tweet #10 >>Tweet: It's summertime and it's HOT in Atlanta.
+Created On: Thu Jul 19 01:58:20 +0000 2018Tweet #11 >>Tweet: Almost time for College Football!  Go Tigers!
+Created On: Thu Jul 19 01:57:40 +0000 2018
+------------------------------
+***** TWEETS *****
+Tweet #0 >>Tweet: Class is about to start?!
+Created On: Sat Jul 21 14:08:56 +0000 2018Tweet #1 >>Tweet: Off to camp at the lake.  Fun.
+Created On: Sat Jul 21 13:42:43 +0000 2018Tweet #2 >>Tweet: Good Morning, Folks!
+Created On: Sat Jul 21 13:42:12 +0000 2018Tweet #3 >>Tweet: Time to snooze!
+Created On: Sat Jul 21 03:19:44 +0000 2018Tweet #4 >>Tweet: ZZZZZZZZ... so sleepy
+Created On: Sat Jul 21 03:19:27 +0000 2018Tweet #5 >>Tweet: Movie in the park tonight.  join us!
+Created On: Fri Jul 20 20:16:03 +0000 2018Tweet #6 >>Tweet: WEEKEND
+Created On: Fri Jul 20 20:15:20 +0000 2018Tweet #7 >>Tweet: 1 more day till the weekend.  Woo Hoo!
+Created On: Fri Jul 20 03:12:48 +0000 2018Tweet #8 >>Tweet: Not the most relaxing summer ever...
+Created On: Fri Jul 20 03:11:51 +0000 2018Tweet #9 >>Tweet: Summertime fun
+Created On: Fri Jul 20 03:10:58 +0000 2018Tweet #10 >>Tweet: It's summertime and it's HOT in Atlanta.
+Created On: Thu Jul 19 01:58:20 +0000 2018Tweet #11 >>Tweet: Almost time for College Football!  Go Tigers!
+Created On: Thu Jul 19 01:57:40 +0000 2018
+------------------------------
+***** SONG *****
+Artist(s): Ace of Base
+Song Name: The Sign
+Preview Link: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=beeec1203a66453e99e3119ef75c13e6
+Album: The Sign (US Album) [Remastered]
+------------------------------
+***** MOVIE *****
+Title: Mr. Nobody
+Release Date: 2009
+IMDB Rating: 7.9
+Rotten Tomatoes Rating: 66%
+Production Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+------------------------------
+***** DO WHAT IT SAYS *****
+Command: spotify-this-song
+Options: "I Want it That Way"
+------------------------------
+***** SONG *****
+Artist(s): Backstreet Boys
+Song Name: I Want It That Way
+Preview Link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=beeec1203a66453e99e3119ef75c13e6
+Album: The Hits--Chapter One
