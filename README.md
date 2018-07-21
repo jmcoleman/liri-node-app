@@ -20,7 +20,7 @@ When searching for details about movies, songs and your tweet history, LIRI has 
 **How solved:** \
 By specifing commands via the command line or in a batch via a file, the user is able to query and return activity and details on movies, songs and tweets.\
 **Technical approach:** \
-Leverages node packages for Spotify, Twitter and OMDB to execute calls against the APIs.  The results from the API are interrogated and formatted to be presented to the user on the console and then additionally stored in a log file.\
+Leverages node packages for Spotify, Twitter and OMDB to execute calls against the APIs.  The results from the API are interrogated and formatted to be presented to the user on the console and then additionally stored in a log file.
 
 ## Getting Started
 
