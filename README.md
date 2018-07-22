@@ -32,7 +32,7 @@ Clone the repository locally and create API keys to Spotify and Twitter.
 
 ### Installing
 
-To get a development environment up and running, clone the repository locally.  You will need node installed and npm.  You will need to create a .env file in the root and populate it with your API keys.  
+To get a development environment up and running, clone the repository locally.  You will need node installed and npm.  You will need to create an .env file in the root and populate it with your API keys.  
 
 Structure is as follows:
 ```
@@ -77,7 +77,7 @@ This is version 1.0
 
 ## Authors
 
-* **Jenni** - Twitter, OMDB and Spotify API's leverage with the command line and in batch.
+* **Jenni** - Twitter, OMDB and Spotify API's developed to run from the command line and in batch.  Results logged to a file nd returned to the console.
 
 ## License
 
